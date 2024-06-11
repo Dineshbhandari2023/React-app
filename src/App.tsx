@@ -1,10 +1,10 @@
-import Message from "./Message";
-import ListGroup from "./components/ListGroup";
+// import Message from "./Message";
+import List from "./components/List";
 
 function App() {
   return (
     <div>
-      <ListGroup />
+      <List />
     </div>
   );
 }
