@@ -1,6 +1,10 @@
 import { MouseEvent, useState } from "react";
-function List() {
-  let items = ["New York", "Nepal", "Itahari", "kathmandu"];
+interface Props {
+  items: string[];
+  headings: string;
+  onSelectItem: (item: string) => void;
+}
+function List({ items, headings, onSelectItem }: Props) {
   // let selectedIndex = 0;
   const [selectedIndex, setSelectedIndex] = useState(-1);
 
@@ -13,7 +17,7 @@ function List() {
   // };
   return (
     <>
-      <h1>List Groups</h1>
+      <h1>{headings}</h1>
       {items.length === 0 && <p>No Items Found</p>}
       <ul className="list-group">
         {items.map((item, index) => (
@@ -26,6 +30,7 @@ function List() {
             key={item}
             onClick={() => {
               setSelectedIndex(index);
+              onSelectItem(item);
             }}
           >
             {item}
