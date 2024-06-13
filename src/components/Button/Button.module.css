@@ -1,0 +1,17 @@
+.btn {
+  margin: 20%;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 0;
+}
+.btn-primary {
+  background-color: green;
+  color: rgb(40, 32, 32);
+}
+
+:hover.btn {
+  border-radius: 15px;
+  background-color: bisque;
+  color: black;
+  transition: 1s;
+}
