@@ -6,6 +6,8 @@ import { useState } from "react";
 import produce from "immer";
 // import { AiFillAmazonCircle } from "react-icons/ai";
 import Like from "./components/Like/Like";
+import Navbar from "./components/Navbar";
+import Cart from "./components/Cart";
 
 // function App() {
 //   const [alertVisible, setAlertVisible] = useState(false);
@@ -112,7 +114,7 @@ import Like from "./components/Like/Like";
 //   const [tags, setTags] = useState(["Dominar", "Mt15"]);
 
 //   const handleClick = () => {
-//     //Add ing arrays list
+//     //Adding arrays list
 //     // setTags([...tags, "Duke"]);
 
 //     //Removing Arrays list
@@ -129,32 +131,74 @@ import Like from "./components/Like/Like";
 //   );
 // }
 
+// function App() {
+//   const [Vegitables, setVegitables] = useState([
+//     { id: 1, name: "Cauli", address: "Dhankuta" },
+//     { id: 2, name: "Tomato", address: "Mulghat" },
+//   ]);
+//   const handleClick = () => {
+//     // setVegitables(
+//     //   Vegitables.map((Vegitable) =>
+//     //     Vegitable.id === 1 ? { ...Vegitable, address: "Vedetar" } : Vegitable
+//     //   )
+//     // );
+//     setVegitables(
+//       produce((draft) => {
+//         const vegetable = draft.find((Vegitable) => Vegitable.id === 1);
+//         if (vegetable) vegetable.address = "Vedetar";
+//       })
+//     );
+//   };
+//   return (
+//     <div>
+//       {Vegitables.map((Vegitable) => (
+//         <p key={Vegitable.id}>
+//           {Vegitable.name} {Vegitable.address ? "Vedetar" : "New"}
+//         </p>
+//       ))}
+//       <button onClick={handleClick}>Click Me</button>
+//     </div>
+//   );
+// }
+
+// function App() {
+//   const [cartItems, setCartItems] = useState(["product1", "product2"]);
+
+//   return (
+//     <div>
+//       <Navbar cartItemsCount={cartItems.length} />
+//       <Cart cartItems={cartItems} onClear={() => setCartItems([])} />
+//     </div>
+//   );
+// }
+import React from "react";
+
 function App() {
-  const [Vegitables, setVegitables] = useState([
-    { id: 1, name: "Cauli", address: "Dhankuta" },
-    { id: 2, name: "Tomato", address: "Mulghat" },
-  ]);
+  const [games, setgames] = useState({
+    id: 1,
+    player: {
+      name: "Saujal",
+      address: "Itahari",
+    },
+  });
   const handleClick = () => {
-    // setVegitables(
-    //   Vegitables.map((Vegitable) =>
-    //     Vegitable.id === 1 ? { ...Vegitable, address: "Vedetar" } : Vegitable
-    //   )
-    // );
-    setVegitables(
-      produce((draft) => {
-        const vegetable = draft.find((Vegitable) => Vegitable.id === 1);
-        if (vegetable) vegetable.address = "Vedetar";
-      })
-    );
+    setgames({
+      ...games,
+      player: { ...games.player, name: "Dinesh", address: "Mulghat" },
+    });
   };
   return (
     <div>
-      {Vegitables.map((Vegitable) => (
-        <p key={Vegitable.id}>
-          {Vegitable.name} {Vegitable.address ? "Vedetar" : "New"}
-        </p>
-      ))}
-      <button onClick={handleClick}>Click Me</button>
+      <h1> Game Details</h1>
+      <p>{games.id}</p>
+      <h1>Players Details</h1>
+      <p>
+        Name: {games.player.name}
+        <br />
+        Address: {games.player.address}
+      </p>
+
+      <button onClick={handleClick}>Click me for the Change</button>
     </div>
   );
 }
