@@ -8,6 +8,7 @@ import produce from "immer";
 import Like from "./components/Like/Like";
 import Navbar from "./components/Navbar";
 import Cart from "./components/Cart";
+import ExpandableText from "./components/ExpandableText/ExpandableText";
 
 // function App() {
 //   const [alertVisible, setAlertVisible] = useState(false);
@@ -171,34 +172,145 @@ import Cart from "./components/Cart";
 //     </div>
 //   );
 // }
-import React from "react";
+
+// function App() {
+//   const [games, setgames] = useState({
+//     id: 1,
+//     player: {
+//       name: "Saujal",
+//       address: "Itahari",
+//     },
+//   });
+//   const handleClick = () => {
+//     setgames({
+//       ...games,
+//       player: { ...games.player, name: "Dinesh", address: "Mulghat" },
+//     });
+//   };
+//   return (
+//     <div>
+//       <h1> Game Details</h1>
+//       <p>{games.id}</p>
+//       <h1>Players Details</h1>
+//       <p>
+//         Name: {games.player.name}
+//         <br />
+//         Address: {games.player.address}
+//       </p>
+
+//       <button onClick={handleClick}>Click me for the Change</button>
+//     </div>
+//   );
+// }
+
+// function App() {
+//   const [samosa, setSamosa] = useState({
+//     name: "Samosa",
+//     with: ["jhol"],
+//   });
+
+//   const handleClick = () => {
+//     setSamosa({
+//       ...samosa,
+//       with: [...samosa.with, "& Aachar"],
+//     });
+//   };
+//   return (
+//     <div>
+//       <h1>Khaja</h1>
+//       <p>{samosa.name}</p> <br />
+//       <p>{samosa.with}</p>
+//       <button onClick={handleClick}>Click Me</button>
+//     </div>
+//   );
+// }
 
 function App() {
-  const [games, setgames] = useState({
-    id: 1,
-    player: {
-      name: "Saujal",
-      address: "Itahari",
-    },
-  });
-  const handleClick = () => {
-    setgames({
-      ...games,
-      player: { ...games.player, name: "Dinesh", address: "Mulghat" },
-    });
-  };
+  // const [cart, setcart] = useState({
+  //   discount: 0.1,
+  //   items: [
+  //     { id: 1, productName: "Phone", quantity: 1 },
+  //     { id: 2, productName: "Gopro", quantity: 1 },
+  //   ],
+  // });
+  // const handleClick = () => {
+  //   // let count
+  //   setcart({
+  //     ...cart,
+  //     items: cart.items.map((item) =>
+  //       item.id === 1 ? { ...item, quantity: item.quantity + 1 } : item
+  //     ),
+  //   });
+  // };
   return (
     <div>
-      <h1> Game Details</h1>
-      <p>{games.id}</p>
-      <h1>Players Details</h1>
-      <p>
-        Name: {games.player.name}
-        <br />
-        Address: {games.player.address}
-      </p>
+      {/* <p>Discount: {cart.discount}</p>
+      <p>Items:</p>
+      <ul>
+        {cart.items.map((item) => (
+          <li key={item.id}>
+            {item.productName} - Quantity: {item.quantity}
+          </li>
+        ))}
+      </ul>
+      <button onClick={handleClick}>Click Here</button> */}
 
-      <button onClick={handleClick}>Click me for the Change</button>
+      <ExpandableText>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem eum,
+        molestiae laboriosam reiciendis accusamus perspiciatis, nihil impedit
+        assumenda harum ipsa alias tempora velit unde, esse error blanditiis ex
+        rem. Quod culpa quas, laborum dolore veritatis eaque. Consequuntur ea,
+        quia aspernatur officiis cupiditate doloremque aut maiores nam.
+        Architecto autem velit beatae. Laudantium nobis cupiditate fuga dolorum.
+        Ipsa quia excepturi atque quas suscipit eveniet soluta, consequatur
+        accusantium officia voluptatem doloribus, fugit ipsum? Doloribus quod ut
+        placeat debitis atque mollitia non maiores eaque modi quos voluptatibus
+        sequi commodi possimus magnam at dolore, quis, odio a eveniet itaque.
+        Pariatur aut error quo neque nam consequatur ex consequuntur, ipsum unde
+        incidunt earum accusantium in ea itaque animi amet corrupti facilis
+        dolorum nesciunt dolore? Esse sit accusamus id magnam. Eaque laborum non
+        laboriosam autem? Obcaecati dicta nihil iusto doloremque totam vitae,
+        amet molestias minima voluptatem, et eveniet quaerat aspernatur nam
+        provident enim illum ad illo! Deleniti voluptatum sed, quisquam minima a
+        tenetur neque praesentium vel atque nisi ratione necessitatibus vero
+        tempore eos odio nulla possimus adipisci exercitationem nemo laborum
+        minus quae distinctio numquam! Quaerat ipsam saepe, sapiente odio ex nam
+        est expedita iusto. Assumenda, a. Nobis iste optio totam eum, eos ea
+        iure expedita minus dolore voluptas possimus laudantium rerum ad velit
+        sunt at doloribus saepe, earum nihil alias molestiae. Est ut aut sed
+        dicta enim saepe praesentium quae dolores? Dicta vel ratione dolore
+        doloribus eius quaerat at minus expedita nihil, iure corrupti? Suscipit
+        commodi incidunt porro vero impedit laboriosam eligendi doloremque,
+        repellat expedita praesentium officia, voluptatibus atque pariatur
+        quibusdam molestiae tempore et veniam iusto velit corrupti aspernatur
+        est. Quia voluptate laudantium voluptas tenetur aliquid doloribus
+        nesciunt, et, ut quam cum minima maxime ipsum fugit vero dolorum ducimus
+        rerum ab. Corporis deleniti, architecto odit, ad necessitatibus tempore
+        sequi temporibus quaerat aspernatur similique corrupti voluptatibus
+        veniam molestiae. Eaque exercitationem in veniam, praesentium tempore at
+        id facilis beatae repudiandae amet? Perferendis pariatur provident,
+        vitae ducimus, distinctio expedita corporis minus tenetur inventore
+        placeat quae vero! Iusto voluptate distinctio minus aspernatur odio
+        dicta facere, ab a sunt mollitia voluptatum veritatis! Itaque, quas.
+        Laborum quas culpa maxime doloremque ab nostrum consequuntur facere ea,
+        veritatis perspiciatis optio quae dolore saepe voluptates modi adipisci
+        iste dolorem exercitationem? Necessitatibus laborum veniam error
+        doloremque velit dolor repellat qui a optio temporibus quod neque
+        architecto, iste impedit ratione repudiandae quos magnam reprehenderit!
+        Quo beatae autem maiores minima. Asperiores ipsam exercitationem facilis
+        officia unde non dicta earum minus soluta architecto quia inventore ut
+        nobis nemo dignissimos quas fugiat, delectus veniam. Illo nisi voluptate
+        iusto ab dolore! Architecto tempore earum debitis, incidunt, tenetur
+        quidem sint accusantium ex reprehenderit sunt rem tempora dolor
+        inventore expedita itaque quaerat. Omnis necessitatibus maiores
+        voluptatum fugit distinctio recusandae enim, non quae, perferendis
+        officia praesentium consectetur magni. Quos cupiditate dolorem quasi aut
+        nemo veritatis eum consequuntur dolores soluta! Repellendus aperiam
+        ratione, totam sequi tenetur molestias at! Exercitationem, consequuntur
+        reiciendis eveniet a deserunt natus fugiat ad, dolorum quisquam alias
+        excepturi. Similique at pariatur minus, dolores numquam beatae ad qui
+        odit, adipisci quaerat quidem alias perferendis?
+      </ExpandableText>
     </div>
   );
 }
