@@ -4,7 +4,7 @@ interface Props {
   children: string;
 }
 
-const ExpandableText = ({ children, maxCount = 100 }: Props) => {
+const ExpandableText = ({ children, maxCount = 20 }: Props) => {
   const [isExpanded, setExpanded] = useState(false);
 
   if (children.length <= maxCount) return <p>{children}</p>;
