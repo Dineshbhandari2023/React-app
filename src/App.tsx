@@ -5,11 +5,12 @@
 import { useState } from "react";
 import produce from "immer";
 // import { AiFillAmazonCircle } from "react-icons/ai";
-import Like from "./components/Like/Like";
-import Navbar from "./components/Navbar";
-import Cart from "./components/Cart";
-import ExpandableText from "./components/ExpandableText/ExpandableText";
-import Form from "./components/Form";
+// import Like from "./components/Like/Like";
+// import Navbar from "./components/Navbar";
+// import Cart from "./components/Cart";
+// import ExpandableText from "./components/ExpandableText/ExpandableText";
+// import Form from "./components/Form";
+import ExpenseList from "./expense-tracker/components/ExpenseList";
 
 // function App() {
 //   const [alertVisible, setAlertVisible] = useState(false);
@@ -316,10 +317,21 @@ import Form from "./components/Form";
 //   );
 // }
 
+import React from "react";
+
 function App() {
+  const [expenses, setExpenses] = useState([
+    { id: 1, description: "aaa", amount: 10, category: "utilities" },
+    { id: 2, description: "bbb", amount: 10, category: "utilities" },
+    { id: 3, description: "ccc", amount: 10, category: "utilities" },
+    { id: 4, description: "ddd", amount: 10, category: "utilities" },
+  ]);
   return (
     <div>
-      <Form />
+      <ExpenseList
+        expenses={expenses}
+        onDelete={(id) => setExpenses(expenses.filter((e) => e.id !== id))}
+      />
     </div>
   );
 }
